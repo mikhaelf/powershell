@@ -1,10 +1,11 @@
-#To update a set of properties in Active Directory (example is email)
-#Assume organization is acme.com and OU to update is employees
-#Assume naming convention is first name initial dot lastname @ acme.com
-#Example: John Doe is jdoe@acme.com
-#Can be used to set properties (i.e., department, address, etc.) for any OU
-#
+#Purpose: update a set of properties in Active Directory (example is email)
 #Updates email address to standard unless already exists
+#
+#Assume organization is acme.com and OU to update is employees
+#Assume naming convention is first initial of first name with lastname @ acme.com
+#Example: John Doe is jdoe@acme.com set to all lowercase
+#Can be used to set properties (i.e., department, address, etc.) for any OU
+
 
 Import-Module ActiveDirectory
 $users = Get-ADUser -Filter * -Properties samaccountname, SurName, EmailAddress, givenName, Surname -SearchBase "OU=EMPLOYEES,DC=ACME,DC=COM"
