@@ -1,6 +1,6 @@
 #To update a set of properties in Active Directory (example is email)
 #Assume organization is acme.com and OU to update is employees
-#Assume naming convention is firstname dot lastname @ acme.com
+#Assume naming convention is first name initial dot lastname @ acme.com
 #Example: John Doe is jdoe@acme.com
 #
 #Can be used to set properties (i.e., department, address, etc.) for any OU
